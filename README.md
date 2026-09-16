@@ -1,77 +1,36 @@
-# VisãoLab - Website Institucional & Catálogo de Ótica
+# Instituto Faz Bem Por Todo Pará - Portal Institucional
 
-Site moderno, responsivo e de alta conversão desenvolvido para a ótica **VisãoLab**. Inclui catálogo interativo com filtros, consultoria visual por formato de rosto, integração direta com WhatsApp para orçamentos e agendamentos, e apresentação dos diferenciais do laboratório óptico digital.
+Website institucional, mapa de ações sociais e portal de acolhimento do **Instituto Faz Bem Por Todo Pará**. Focado em saúde visual comunitária, caravanas itinerantes de exames de vista, programa de óculos social e atendimento humanizado nos municípios do Pará.
 
 ---
 
-## 🚀 Como Executar Localmente
+## 🌟 Funcionalidades do Portal
 
-Como o projeto é construído em HTML5, Tailwind CSS e JavaScript puro (sem necessidade de compilação ou banco de dados), você pode:
-
-1. **Abrir diretamente no navegador:** Dê um duplo clique no arquivo `index.html`.
-2. **Ou usar um servidor local:**
-   ```bash
-   # Com Python:
-   python -m http.server 8080
-
-   # Ou com Node (npx serve):
-   npx serve .
-   ```
-   Em seguida, acesse no navegador: `http://localhost:8080`.
+- **Identidade Solidária & Amazônica:** Paleta inspirada nas cores do Pará e da Amazônia (Verde Esmeralda, Dourado Solar e Azul Acolhedor).
+- **Frentes de Atuação:** Destaque para as Caravanas da Visão, Programa Óculos Social, Ações Ribeirinhas e nas Ilhas do Marajó, Triagem em Escolas e Cuidado com a Terceira Idade.
+- **Painel de Municípios Atendidos:** Lista categorizada por regiões do Pará (Metropolitana, Baixo Tocantins, Nordeste, Marajó, Sudeste/Carajás, Baixo Amazonas).
+- **Formulário de Parcerias & Solicitação de Ações:** Canal direto com redirecionamento para o WhatsApp da coordenação para prefeituras, lideranças comunitárias e igrejas levarem a caravana para suas localidades.
+- **Depoimentos & Impacto:** Métricas de pessoas atendidas e óculos entregues.
 
 ---
 
 ## ⚙️ Como Personalizar
 
-### 1. Alterar o WhatsApp e Nome da Loja
-No início do arquivo `assets/js/main.js`:
+### 1. Alterar o WhatsApp da Coordenação
+No arquivo `assets/js/main.js`:
 ```javascript
 const CONFIG = {
-  storeName: "VisãoLab - Ótica & Laboratório Digital",
-  whatsappNumber: "5511999999999", // Insira o DDI (55) + DDD + Número sem traços ou espaços
-  defaultMessage: "Olá! Vim através do site da VisãoLab...",
+  instituteName: "Instituto Faz Bem Por Todo Pará",
+  whatsappNumber: "5591999999999", // Insira o DDD (ex: 91/93/94) + número sem espaços ou traços
+  defaultMessage: "Olá! Vim pelo site do Instituto Faz Bem Por Todo Pará...",
 };
 ```
 
-### 2. Adicionar ou Editar Produtos no Catálogo
-No mesmo arquivo `assets/js/main.js`, localize o array `PRODUCTS`. Você pode adicionar fotos, alterar nomes, materiais, categorias (`grau-feminino`, `grau-masculino`, `solar`, `infantil`, `lentes`):
-```javascript
-{
-  id: 1,
-  name: "Classic Acetato Havana",
-  category: "grau-feminino",
-  badge: "Mais Vendido",
-  format: "Quadrado / Redondo",
-  material: "Acetato Italiano",
-  desc: "Armação elegante com tons tartaruga...",
-  image: "https://url-da-foto.jpg",
-  tags: ["Antirreflexo", "Luz Azul", "Multifocal"]
-}
-```
-
-### 3. Alterar Endereço, Telefones e CNPJ
-No arquivo `index.html`, vá até a seção `#contato` e o rodapé `<footer>` para atualizar o endereço físico, horário de funcionamento e redes sociais.
+### 2. Adicionar Novas Cidades ou Projetos
+No mesmo arquivo `assets/js/main.js`, atualize as listas `PROJECTS` e `CITIES`.
 
 ---
 
-## 📁 Estrutura de Arquivos
+## 🚀 Publicação
 
-```
-visaolab/
-├── index.html            # Estrutura completa e semântica do site
-├── assets/
-│   ├── css/
-│   │   └── style.css     # Estilos personalizados, animações e glassmorphism
-│   └── js/
-│       └── main.js       # Catálogo dinâmico, filtros, links de WhatsApp e quiz de rosto
-└── README.md             # Documentação do projeto
-```
-
----
-
-## 🌐 Como Publicar na Internet
-
-Este site pode ser publicado gratuitamente ou com domínio próprio em serviços como:
-- **Netlify / Vercel:** Basta arrastar a pasta `visaolab` no painel.
-- **GitHub Pages:** Subir o repositório e ativar o GitHub Pages na raiz.
-- **Hospedagem Tradicional (cPanel, Hostinger, Locaweb):** Enviar os arquivos via FTP para a pasta `public_html`.
+O repositório está integrado com a **Vercel** e o **GitHub**. Qualquer atualização enviada via `git push` é publicada automaticamente em tempo real!

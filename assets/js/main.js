@@ -1,119 +1,109 @@
-// Configurações Globais da Loja / Ótica
+// Configurações do Instituto Faz Bem Por Todo Pará
 const CONFIG = {
-  storeName: "VisãoLab - Ótica & Laboratório Digital",
-  whatsappNumber: "5511999999999", // Altere para o WhatsApp real da ótica (com DDI e DDD)
-  defaultMessage: "Olá! Vim através do site da VisãoLab e gostaria de tirar dúvidas ou agendar um atendimento.",
+  instituteName: "Instituto Faz Bem Por Todo Pará",
+  whatsappNumber: "5591999999999", // Altere para o WhatsApp oficial do Instituto (DDD 91/93/94)
+  defaultMessage: "Olá! Vim pelo site do Instituto Faz Bem Por Todo Pará e gostaria de informações sobre os mutirões de saúde visual e atendimento social.",
 };
 
-// Catálogo de Produtos em Destaque
-const PRODUCTS = [
+// Projetos e Frentes de Atuação
+const PROJECTS = [
   {
     id: 1,
-    name: "Classic Acetato Havana",
-    category: "grau-feminino",
-    badge: "Mais Vendido",
-    format: "Quadrado / Redondo",
-    material: "Acetato Italiano",
-    desc: "Armação elegante com tons tartaruga, leveza e alta durabilidade para o dia a dia.",
-    image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=600&q=80",
-    tags: ["Antirreflexo", "Luz Azul", "Multifocal"]
+    title: "Caravana da Visão Itinerante",
+    category: "saude-visual",
+    badge: "Mutirão Comunitário",
+    desc: "Unidades móveis equipadas com aparelhos de refração e optometria de alta precisão que viajam até bairros periféricos e cidades do interior do Pará.",
+    impact: "+35.000 pessoas atendidas",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+    tags: ["Exame Completo", "Auto-refrator", "Gratuito / Social"]
   },
   {
     id: 2,
-    name: "Titanium Tech Black",
-    category: "grau-masculino",
-    badge: "Ultra Leve",
-    format: "Retangular",
-    material: "Titânio Aeroespacial",
-    desc: "Apenas 14 gramas de peso. Resistente à corrosão e ajuste anatômico perfeito.",
+    title: "Programa Óculos Social",
+    category: "oculos-social",
+    badge: "Inclusão & Cidadania",
+    desc: "Acesso a armações modernas, leves e resistentes com lentes corretivas de alta qualidade a custo popular subsidiado para famílias em vulnerabilidade.",
+    impact: "+28.000 óculos entregues",
     image: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&w=600&q=80",
-    tags: ["Hipoalergênico", "Alta Resistência"]
+    tags: ["Armações Novas", "Antirreflexo", "Garantia"]
   },
   {
     id: 3,
-    name: "Sun Aviator Gold Gradient",
-    category: "solar",
-    badge: "Tendência",
-    format: "Aviador",
-    material: "Liga Metálica Dourada",
-    desc: "Lentes polarizadas UV400 com degradê elegante e hastes finas de máximo conforto.",
-    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
-    tags: ["Polarizado", "Proteção UV400"]
+    title: "Visão nas Comunidades Ribeirinhas",
+    category: "ribeirinhos",
+    badge: "Amazônia Profunda",
+    desc: "Ações fluviais levando cuidado visual e triagem para populações ribeirinhas, quilombolas e ilhas do Marajó e Baixo Tocantins.",
+    impact: "+40 comunidades visitadas",
+    image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80",
+    tags: ["Acesso Fluvial", "Marajó", "Cuidado Humanizado"]
   },
   {
     id: 4,
-    name: "Cat Eye Cristal Rose",
-    category: "grau-feminino",
-    badge: "Destaque",
-    format: "Gatinho",
-    material: "Acetato Translúcido",
-    desc: "Design moderno estilo gatinho em acetato transparente rosê. Realça qualquer olhar.",
-    image: "https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=600&q=80",
-    tags: ["Moda", "Design Europeu"]
+    title: "Olhar do Futuro nas Escolas",
+    category: "infantil",
+    badge: "Educação & Infância",
+    desc: "Triagem visual precoce em alunos da rede pública para diagnosticar miopia e astigmatismo que prejudicam o aprendizado escolar.",
+    impact: "+12.000 crianças avaliadas",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
+    tags: ["Apoio Pedagógico", "Infantil", "Prevenção"]
   },
   {
     id: 5,
-    name: "Urban Matte Woodside",
-    category: "grau-masculino",
-    badge: "Novo",
-    format: "Clubmaster / Vintage",
-    material: "Metal & Acetato Fosco",
-    desc: "Inspiração retrô com toques modernos de acabamento fosco e encaixe ergonômico.",
-    image: "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80",
-    tags: ["Estilo Urbano", "Conforto"]
+    title: "Cuidado com a Melhor Idade",
+    category: "idosos",
+    badge: "Dignidade & Autonomia",
+    desc: "Atenção prioritária a idosos para detecção de presbiopia (vista cansada), triagem preventiva de catarata e glaucoma com encaminhamento.",
+    impact: "+15.000 idosos acolhidos",
+    image: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=600&q=80",
+    tags: ["Leitura e Autonomia", "Multifocais", "Acolhimento"]
   },
   {
     id: 6,
-    name: "Horizon Dark Polarized",
-    category: "solar",
-    badge: "Proteção Total",
-    format: "Wayfarer",
-    material: "Policarbonato Flex",
-    desc: "Óculos de sol robusto com lentes escuras espelhadas, bloqueio 100% de raios UVA/UVB.",
-    image: "https://images.unsplash.com/photo-1509695507497-903c140c43b0?auto=format&fit=crop&w=600&q=80",
-    tags: ["Esportivo", "Lentes Polarizadas"]
-  },
-  {
-    id: 7,
-    name: "Flex Kids Confort",
-    category: "infantil",
-    badge: "Indestrutível",
-    format: "Oval Flexível",
-    material: "Silicone Macio / TR90",
-    desc: "Sem partes pontiagudas, altamente flexível com tirinha elástica de segurança.",
-    image: "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=600&q=80",
-    tags: ["Hipoalergênico", "Ultra Resistente"]
-  },
-  {
-    id: 8,
-    name: "Lentes de Contato HidroGel HD",
-    category: "lentes",
-    badge: "Laboratório",
-    format: "Descarte Mensal/Diário",
-    material: "Silicone Hidrogel 65% Água",
-    desc: "Oxigenação contínua da córnea, hidratação durante todo o dia sem ressecamento.",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80",
-    tags: ["Alta Umectação", "Grau ou Estética"]
+    title: "Mutirão da Cidadania & Bem-Estar",
+    category: "cidadania",
+    badge: "Ação Integrada",
+    desc: "Eventos comunitários com aferição de pressão arterial, glicemia, orientações preventivas de saúde e distribuição de materiais informativos.",
+    impact: "+50 bairros beneficiados",
+    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80",
+    tags: ["Saúde Geral", "Voluntariado", "Solidariedade"]
   }
 ];
 
-// Função para gerar o link do WhatsApp
+// Cidades e Regiões com Ações no Pará
+const CITIES = [
+  { name: "Belém", region: "metropolitana", status: "Base Central & Ações Semanais", count: "35+ Ações" },
+  { name: "Ananindeua", region: "metropolitana", status: "Atendimento Contínuo", count: "22+ Ações" },
+  { name: "Marituba / Benevides", region: "metropolitana", status: "Ações Periódicas", count: "14+ Ações" },
+  { name: "Castanhal", region: "nordeste", status: "Polo Nordeste", count: "18+ Ações" },
+  { name: "Abaetetuba", region: "baixo-tocantins", status: "Polo Ribeirinho", count: "16+ Ações" },
+  { name: "Cametá", region: "baixo-tocantins", status: "Ação Fluvial Realizada", count: "10+ Ações" },
+  { name: "Breves / Soure (Marajó)", region: "marajo", status: "Expedição Marajó", count: "12+ Ações" },
+  { name: "Barcarena", region: "baixo-tocantins", status: "Atendimento Comunitário", count: "11+ Ações" },
+  { name: "Marabá", region: "sudeste", status: "Polo Carajás", count: "20+ Ações" },
+  { name: "Parauapebas / Canaã", region: "sudeste", status: "Mutirão Solidário", count: "15+ Ações" },
+  { name: "Santarém", region: "baixo-amazonas", status: "Polo Tapajós", count: "14+ Ações" },
+  { name: "Bragança / Capanema", region: "nordeste", status: "Circuito da Visão", count: "12+ Ações" },
+  { name: "Tucuruí", region: "sudeste", status: "Ação Realizada", count: "8+ Ações" },
+  { name: "Paragominas", region: "nordeste", status: "Atendimento Integrado", count: "9+ Ações" }
+];
+
+// Gerador de links para WhatsApp
 function generateWhatsAppUrl(message) {
   const encodedMsg = encodeURIComponent(message || CONFIG.defaultMessage);
   return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodedMsg}`;
 }
 
-// Inicialização após o DOM estar pronto
+// Inicialização
 document.addEventListener("DOMContentLoaded", () => {
   initWhatsAppLinks();
-  initCatalog();
+  initProjects();
+  initCities();
   initMobileMenu();
   initFaqAccordion();
-  initContactForm();
-  initFaceShapeQuiz();
+  initPartnerForm();
 });
 
-// Atualiza links com o número de WhatsApp configurado
+// Atualiza botões com o WhatsApp configurado
 function initWhatsAppLinks() {
   const directWaButtons = document.querySelectorAll(".btn-whatsapp-direct");
   directWaButtons.forEach(btn => {
@@ -123,235 +113,219 @@ function initWhatsAppLinks() {
   });
 }
 
-// Renderização e Filtro do Catálogo
-function initCatalog() {
-  const container = document.getElementById("catalog-grid");
-  const filterButtons = document.querySelectorAll(".filter-btn");
+// Renderiza os Projetos Sociais
+function initProjects() {
+  const container = document.getElementById("projects-grid");
+  const filterButtons = document.querySelectorAll(".filter-project-btn");
 
   if (!container) return;
 
-  function renderProducts(category = "todos") {
+  function render(category = "todos") {
     container.innerHTML = "";
-    
-    const filtered = category === "todos" 
-      ? PRODUCTS 
-      : PRODUCTS.filter(p => p.category === category);
 
-    if (filtered.length === 0) {
-      container.innerHTML = `
-        <div class="col-span-full text-center py-12 text-slate-500">
-          <p class="text-lg">Nenhum modelo encontrado nesta categoria.</p>
-        </div>
-      `;
-      return;
-    }
+    const filtered = category === "todos"
+      ? PROJECTS
+      : PROJECTS.filter(p => p.category === category);
 
-    filtered.forEach(product => {
-      const waMessage = `Olá! Vi o modelo *${product.name}* (${product.material}) no site da VisãoLab e gostaria de saber o valor e disponibilidade.`;
+    filtered.forEach(project => {
+      const waMessage = `Olá! Gostaria de saber mais ou participar do projeto *${project.title}* do Instituto Faz Bem Por Todo Pará.`;
       const waUrl = generateWhatsAppUrl(waMessage);
 
       const card = document.createElement("div");
-      card.className = "product-card bg-white rounded-2xl overflow-hidden border border-slate-100 flex flex-col group";
+      card.className = "social-card bg-white rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col justify-between shadow-sm hover:border-emerald-500/50 group";
       card.innerHTML = `
-        <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
-          <img 
-            src="${product.image}" 
-            alt="${product.name}" 
-            loading="lazy" 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          />
-          <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-sky-800 text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
-            ${product.badge}
-          </span>
-          <span class="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-0.5 rounded-full">
-            ${product.format}
-          </span>
-        </div>
-        
-        <div class="p-5 flex-1 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-xs font-medium text-sky-600 uppercase tracking-wider">${product.material}</span>
-            </div>
-            <h3 class="text-lg font-bold text-slate-900 mb-2">${product.name}</h3>
-            <p class="text-slate-600 text-sm mb-4 line-clamp-2">${product.desc}</p>
-            
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              ${product.tags.map(tag => `<span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-md">${tag}</span>`).join('')}
-            </div>
+        <div>
+          <div class="relative overflow-hidden aspect-[16/10] bg-slate-100">
+            <img 
+              src="${project.image}" 
+              alt="${project.title}" 
+              loading="lazy" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 left-3 bg-emerald-700/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              ${project.badge}
+            </span>
           </div>
 
-          <div class="pt-3 border-t border-slate-100">
-            <a 
-              href="${waUrl}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-sky-600 text-white font-medium text-sm transition-colors duration-200"
-            >
-              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.682 0-3.264-.423-4.661-1.164l-5.339 1.396 1.424-5.207c-.838-1.458-1.324-3.149-1.324-4.949 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
-              </svg>
-              Consultar Modelo
-            </a>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">
+                <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                ${project.impact}
+              </span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
+              ${project.title}
+            </h3>
+            
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              ${project.desc}
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-2">
+              ${project.tags.map(t => `<span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2 py-0.5 rounded-md">${t}</span>`).join('')}
+            </div>
           </div>
+        </div>
+
+        <div class="p-6 pt-0">
+          <a 
+            href="${waUrl}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider transition-colors duration-200"
+          >
+            Apoiar ou Solicitar Vagas
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
         </div>
       `;
       container.appendChild(card);
     });
   }
 
-  // Eventos dos botões de filtro
   filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       filterButtons.forEach(b => {
-        b.classList.remove("bg-sky-600", "text-white", "shadow-sm");
+        b.classList.remove("bg-emerald-600", "text-white", "shadow-sm");
         b.classList.add("bg-white", "text-slate-700", "hover:bg-slate-100");
       });
 
-      btn.classList.add("bg-sky-600", "text-white", "shadow-sm");
+      btn.classList.add("bg-emerald-600", "text-white", "shadow-sm");
       btn.classList.remove("bg-white", "text-slate-700", "hover:bg-slate-100");
 
       const category = btn.getAttribute("data-category");
-      renderProducts(category);
+      render(category);
     });
   });
 
-  // Render inicial
-  renderProducts("todos");
+  render("todos");
+}
+
+// Renderiza os Municípios Atendidos
+function initCities() {
+  const container = document.getElementById("cities-grid");
+  const filterBtns = document.querySelectorAll(".filter-city-btn");
+
+  if (!container) return;
+
+  function render(region = "todos") {
+    container.innerHTML = "";
+    const filtered = region === "todos" ? CITIES : CITIES.filter(c => c.region === region);
+
+    filtered.forEach(city => {
+      const waMsg = `Olá! Sou de *${city.name} - Pará* e gostaria de saber quando será a próxima caravana/mutirão do Instituto Faz Bem por aqui.`;
+      const waUrl = generateWhatsAppUrl(waMsg);
+
+      const div = document.createElement("div");
+      div.className = "bg-white p-4 rounded-2xl border border-slate-200 hover:border-emerald-500/60 shadow-sm transition-all flex items-center justify-between group";
+      div.innerHTML = `
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            PA
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm leading-tight">${city.name}</h4>
+            <p class="text-[11px] text-slate-500">${city.status}</p>
+          </div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="inline-block text-[10px] font-extrabold text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded-full mb-1">
+            ${city.count}
+          </span>
+          <div>
+            <a href="${waUrl}" target="_blank" class="text-[11px] font-bold text-slate-500 hover:text-emerald-700 flex items-center gap-1">
+              Ver datas
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => {
+        b.classList.remove("bg-emerald-700", "text-white");
+        b.classList.add("bg-white", "text-slate-600", "hover:bg-slate-50");
+      });
+      btn.classList.add("bg-emerald-700", "text-white");
+      btn.classList.remove("bg-white", "text-slate-600", "hover:bg-slate-50");
+      render(btn.getAttribute("data-region"));
+    });
+  });
+
+  render("todos");
 }
 
 // Menu Mobile
 function initMobileMenu() {
-  const toggleBtn = document.getElementById("mobile-menu-btn");
+  const btn = document.getElementById("mobile-menu-btn");
   const menu = document.getElementById("mobile-menu");
   const links = document.querySelectorAll(".mobile-nav-link");
 
-  if (!toggleBtn || !menu) return;
+  if (!btn || !menu) return;
 
-  toggleBtn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.add("hidden");
-    });
-  });
+  btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+  links.forEach(l => l.addEventListener("click", () => menu.classList.add("hidden")));
 }
 
-// Accordion do FAQ
+// FAQ Accordion
 function initFaqAccordion() {
-  const faqItems = document.querySelectorAll(".faq-item");
+  const items = document.querySelectorAll(".faq-item");
+  items.forEach(item => {
+    const q = item.querySelector(".faq-question");
+    const a = item.querySelector(".faq-answer");
+    const ic = item.querySelector(".faq-icon");
 
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector(".faq-question");
-    const answer = item.querySelector(".faq-answer");
-    const icon = item.querySelector(".faq-icon");
+    if (!q || !a) return;
 
-    if (!questionBtn || !answer) return;
-
-    questionBtn.addEventListener("click", () => {
-      const isOpen = !answer.classList.contains("hidden");
-
-      // Fecha todos os outros
-      document.querySelectorAll(".faq-answer").forEach(ans => ans.classList.add("hidden"));
-      document.querySelectorAll(".faq-icon").forEach(ic => ic.classList.remove("rotate-180"));
+    q.addEventListener("click", () => {
+      const isOpen = !a.classList.contains("hidden");
+      document.querySelectorAll(".faq-answer").forEach(el => el.classList.add("hidden"));
+      document.querySelectorAll(".faq-icon").forEach(el => el.classList.remove("rotate-180"));
 
       if (!isOpen) {
-        answer.classList.remove("hidden");
-        if (icon) icon.classList.add("rotate-180");
+        a.classList.remove("hidden");
+        if (ic) ic.classList.add("rotate-180");
       }
     });
   });
 }
 
-// Formulário de Contato Rápido
-function initContactForm() {
-  const form = document.getElementById("contact-form");
-  const feedback = document.getElementById("form-feedback");
+// Formulário para Líderes / Parcerias / Voluntários
+function initPartnerForm() {
+  const form = document.getElementById("partner-form");
+  const feedback = document.getElementById("partner-feedback");
 
   if (!form) return;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = document.getElementById("name")?.value || "";
-    const phone = document.getElementById("phone")?.value || "";
-    const msg = document.getElementById("message")?.value || "";
+    const name = document.getElementById("p-name")?.value || "";
+    const city = document.getElementById("p-city")?.value || "";
+    const role = document.getElementById("p-role")?.value || "Morador / Beneficiário";
+    const phone = document.getElementById("p-phone")?.value || "";
+    const msg = document.getElementById("p-message")?.value || "";
 
-    const fullMessage = `Olá! Meu nome é *${name}* (Tel: ${phone}). Mensagem enviada pelo formulário do site: "${msg}"`;
+    const fullMessage = `*SOLICITAÇÃO DE AÇÃO / PARCERIA - INSTITUTO FAZ BEM POR TODO PARÁ*\n\n` +
+      `👤 *Nome:* ${name}\n` +
+      `📍 *Município/Bairro:* ${city}\n` +
+      `🏷️ *Perfil:* ${role}\n` +
+      `📱 *Telefone/WhatsApp:* ${phone}\n` +
+      `💬 *Mensagem/Objetivo:* ${msg}`;
+
     const redirectUrl = generateWhatsAppUrl(fullMessage);
 
     if (feedback) {
       feedback.classList.remove("hidden");
-      feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
     setTimeout(() => {
       window.open(redirectUrl, "_blank");
-    }, 1000);
-  });
-}
-
-// Mini Consultoria de Estilo (Descubra sua armação)
-function initFaceShapeQuiz() {
-  const shapeButtons = document.querySelectorAll(".face-shape-btn");
-  const resultContainer = document.getElementById("quiz-result");
-
-  const recommendations = {
-    redondo: {
-      title: "Rosto Redondo",
-      recommend: "Armações Retangulares, Quadradas e Geométricas",
-      tip: "Linhas retas e ângulos bem definidos ajudam a alongar as feições e criar equilíbrio visual perfeito.",
-      example: "Experimente armações com cantos acentuados ou modelos Wayfarer estruturados."
-    },
-    quadrado: {
-      title: "Rosto Quadrado",
-      recommend: "Armações Redondas, Ovais ou Estilo Aviador",
-      tip: "Formatos curvilíneos e com cantos arredondados suavizam os ângulos marcantes do maxilar e da testa.",
-      example: "Óculos redondos em acetato fino ou aviadores clássicos de metal."
-    },
-    oval: {
-      title: "Rosto Oval",
-      recommend: "Quase todos os modelos combinam com você!",
-      tip: "Por ter proporções equilibradas, você tem liberdade para ousar em armações oversized, gatinho ou retangulares.",
-      example: "Modelos Cat Eye (gatinho) ou armações geométricas contemporâneas."
-    },
-    coracao: {
-      title: "Rosto Coração / Triangular",
-      recommend: "Armações Gatinho, Ovais ou Rimless (sem aro)",
-      tip: "Modelos com base mais larga ou armações leves na parte inferior equilibram a testa mais ampla.",
-      example: "Armações de metal fino ou estilo Clubmaster suave."
-    }
-  };
-
-  shapeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      shapeButtons.forEach(b => b.classList.remove("ring-2", "ring-sky-600", "bg-sky-50"));
-      btn.classList.add("ring-2", "ring-sky-600", "bg-sky-50");
-
-      const shape = btn.getAttribute("data-shape");
-      const data = recommendations[shape];
-
-      if (data && resultContainer) {
-        resultContainer.innerHTML = `
-          <div class="p-6 rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-sky-100 animate-fadeIn">
-            <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Recomendação Personalizada</span>
-            <h4 class="text-xl font-extrabold text-slate-900 mt-1 mb-2">${data.recommend}</h4>
-            <p class="text-slate-600 text-sm mb-3">${data.tip}</p>
-            <p class="text-xs text-sky-700 bg-sky-100/70 p-2.5 rounded-lg"><strong>Dica de estilo:</strong> ${data.example}</p>
-            <div class="mt-4">
-              <a 
-                href="${generateWhatsAppUrl(`Olá! Fiz o teste no site e meu formato de rosto é ${data.title}. Gostaria de ver armações recomendadas!`)}" 
-                target="_blank" 
-                class="inline-flex items-center gap-2 text-xs font-bold text-sky-600 hover:text-sky-700"
-              >
-                Conversar com nosso consultor óptico
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </a>
-            </div>
-          </div>
-        `;
-      }
-    });
+    }, 900);
   });
 }
