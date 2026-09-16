@@ -44,19 +44,19 @@
 
   <!-- ================= TOP BAR INFORMATIVA ================= -->
   <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-3">
-        <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-y-1.5 gap-x-4">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 text-emerald-400 font-semibold text-[11px] sm:text-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0"></span>
           Ação Social & Cidadania
         </span>
         <span class="hidden md:inline text-slate-600">|</span>
-        <span class="hidden md:inline text-slate-300">Levando saúde visual e dignidade por todos os cantos do Pará</span>
+        <span class="hidden md:inline text-slate-300 text-xs">Saúde visual por todo o Pará</span>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3 text-[11px] sm:text-xs ml-auto">
         <a href="#solicitar" class="text-amber-400 hover:text-amber-300 font-bold transition-colors">Leve a Caravana para sua Cidade</a>
-        <span class="text-slate-600">|</span>
-        <a href="#contato" class="hover:text-white transition-colors">Fale com a Coordenação</a>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="#contato" class="hidden sm:inline hover:text-white transition-colors">Coordenação</a>
       </div>
     </div>
   </div>
@@ -64,86 +64,100 @@
   <!-- ================= HEADER / NAVBAR ================= -->
   <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/90 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20 gap-4">
         
         <!-- Logo Instituto Faz Bem Por Todo Pará -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-700 via-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-lg shadow-emerald-700/20 group-hover:scale-105 transition-transform">
+        <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-w-0">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-emerald-700 via-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-lg shadow-emerald-700/20 group-hover:scale-105 transition-transform shrink-0">
             <!-- Icone Coração Solidário + Visão -->
-            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="w-5 h-5 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
             </svg>
           </div>
-          <div>
-            <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight font-heading">
+          <div class="min-w-0">
+            <span class="text-base sm:text-lg md:text-xl xl:text-2xl font-black tracking-tight text-slate-900 block leading-tight font-heading truncate">
               INSTITUTO <span class="text-emerald-700">FAZ BEM</span>
             </span>
-            <span class="text-[11px] uppercase font-extrabold tracking-widest text-amber-600 block">
+            <span class="text-[9px] sm:text-[10px] md:text-[11px] uppercase font-extrabold tracking-widest text-amber-600 block truncate">
               POR TODO PARÁ
             </span>
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden xl:flex items-center gap-7 text-sm font-semibold text-slate-700">
-          <a href="#inicio" class="hover:text-emerald-700 transition-colors">Início</a>
-          <a href="#sobre" class="hover:text-emerald-700 transition-colors">Quem Somos</a>
-          <a href="#projetos" class="hover:text-emerald-700 transition-colors">Projetos & Ações</a>
-          <a href="#municipios" class="hover:text-emerald-700 transition-colors">Cidades Atendidas</a>
-          <a href="#impacto" class="hover:text-emerald-700 transition-colors">Nosso Impacto</a>
-          <a href="#faq" class="hover:text-emerald-700 transition-colors">Dúvidas</a>
+        <!-- Desktop Navigation (visível em telas grandes >= 1024px) -->
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-slate-700">
+          <a href="#inicio" class="hover:text-emerald-700 transition-colors whitespace-nowrap">Início</a>
+          <a href="#sobre" class="hover:text-emerald-700 transition-colors whitespace-nowrap">Quem Somos</a>
+          <a href="#projetos" class="hover:text-emerald-700 transition-colors whitespace-nowrap">Projetos & Ações</a>
+          <a href="#municipios" class="hover:text-emerald-700 transition-colors whitespace-nowrap">Cidades Atendidas</a>
+          <a href="#impacto" class="hover:text-emerald-700 transition-colors whitespace-nowrap">Nosso Impacto</a>
+          <a href="#faq" class="hover:text-emerald-700 transition-colors whitespace-nowrap">Dúvidas</a>
         </nav>
 
-        <!-- CTAs -->
-        <div class="hidden sm:flex items-center gap-3">
+        <!-- Desktop CTAs (visível >= 1024px) -->
+        <div class="hidden lg:flex items-center gap-3 shrink-0">
           <a 
             href="#solicitar" 
-            class="hidden md:inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-xl transition-colors border border-emerald-200"
+            class="hidden xl:inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-xl transition-colors border border-emerald-200 whitespace-nowrap"
           >
-            Solicitar Ação Local
+            Solicitar Ação
           </a>
           <a 
             href="#" 
-            class="btn-whatsapp-direct inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-bold shadow-md shadow-emerald-700/20 hover:shadow-emerald-700/30 transition-all duration-200 transform hover:-translate-y-0.5"
+            class="btn-whatsapp-direct inline-flex items-center gap-2 px-4 xl:px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs xl:text-sm font-bold shadow-md shadow-emerald-700/20 hover:shadow-emerald-700/30 transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap"
           >
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.682 0-3.264-.423-4.661-1.164l-5.339 1.396 1.424-5.207c-.838-1.458-1.324-3.149-1.324-4.949 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
             </svg>
             Falar no WhatsApp
           </a>
         </div>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button 
-          id="mobile-menu-btn" 
-          type="button" 
-          aria-label="Abrir menu" 
-          class="xl:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-          </svg>
-        </button>
+        <!-- Mobile / Tablet Right Controls (< 1024px) -->
+        <div class="flex lg:hidden items-center gap-2 shrink-0">
+          <a 
+            href="#" 
+            class="btn-whatsapp-direct inline-flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-bold shadow-sm transition-all"
+            aria-label="WhatsApp"
+          >
+            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.682 0-3.264-.423-4.661-1.164l-5.339 1.396 1.424-5.207c-.838-1.458-1.324-3.149-1.324-4.949 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
+            </svg>
+            <span class="hidden sm:inline">WhatsApp</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button 
+            id="mobile-menu-btn" 
+            type="button" 
+            aria-label="Abrir menu de navegação" 
+            class="p-2 sm:p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 hover:text-emerald-700 focus:outline-none border border-slate-200 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+          </button>
+        </div>
 
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden xl:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
-      <a href="#inicio" class="mobile-nav-link block text-base font-semibold text-slate-800 hover:text-emerald-700">Início</a>
-      <a href="#sobre" class="mobile-nav-link block text-base font-semibold text-slate-800 hover:text-emerald-700">Quem Somos</a>
-      <a href="#projetos" class="mobile-nav-link block text-base font-semibold text-slate-800 hover:text-emerald-700">Projetos & Ações</a>
-      <a href="#municipios" class="mobile-nav-link block text-base font-semibold text-slate-800 hover:text-emerald-700">Cidades Atendidas</a>
-      <a href="#impacto" class="mobile-nav-link block text-base font-semibold text-slate-800 hover:text-emerald-700">Nosso Impacto</a>
-      <a href="#faq" class="mobile-nav-link block text-base font-semibold text-slate-800 hover:text-emerald-700">Perguntas Frequentes</a>
-      <a href="#solicitar" class="mobile-nav-link block text-base font-semibold text-slate-800 hover:text-emerald-700">Leve para sua Cidade</a>
-      <div class="pt-3">
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <a href="#inicio" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-emerald-700 border-b border-slate-50">Início</a>
+      <a href="#sobre" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-emerald-700 border-b border-slate-50">Quem Somos</a>
+      <a href="#projetos" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-emerald-700 border-b border-slate-50">Projetos & Ações</a>
+      <a href="#municipios" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-emerald-700 border-b border-slate-50">Cidades Atendidas</a>
+      <a href="#impacto" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-emerald-700 border-b border-slate-50">Nosso Impacto</a>
+      <a href="#faq" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-emerald-700 border-b border-slate-50">Perguntas Frequentes</a>
+      <a href="#solicitar" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-emerald-700 border-b border-slate-50">Leve para sua Cidade</a>
+      <div class="pt-2">
         <a 
           href="#" 
           class="btn-whatsapp-direct w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm shadow-md"
         >
-          WhatsApp do Instituto
+          Conversar no WhatsApp
         </a>
       </div>
     </div>
@@ -224,8 +238,8 @@
             </div>
 
             <!-- Floating Card 1: Caravanas Itinerantes -->
-            <div class="absolute -top-4 -left-4 sm:-left-8 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-emerald-100 animate-bounce" style="animation-duration: 5s;">
-              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+            <div class="hidden sm:flex absolute -top-4 -left-4 sm:-left-6 glass-card p-3 sm:p-4 rounded-2xl shadow-xl items-center gap-3 border border-emerald-100 animate-bounce" style="animation-duration: 5s;">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
@@ -237,8 +251,8 @@
             </div>
 
             <!-- Floating Card 2: Óculos Social -->
-            <div class="absolute -bottom-6 -right-4 sm:-right-6 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-amber-100">
-              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+            <div class="hidden sm:flex absolute -bottom-6 -right-4 sm:-right-6 glass-card p-3 sm:p-4 rounded-2xl shadow-xl items-center gap-3 border border-amber-100">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold shrink-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
