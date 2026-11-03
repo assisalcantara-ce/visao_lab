@@ -132,7 +132,7 @@ function initProjects() {
       const waUrl = generateWhatsAppUrl(waMessage);
 
       const card = document.createElement("div");
-      card.className = "social-card bg-white rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col justify-between shadow-sm hover:border-emerald-500/50 group";
+      card.className = "social-card bg-white rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col justify-between shadow-sm hover:border-brand-inst/40 group";
       card.innerHTML = `
         <div>
           <div class="relative overflow-hidden aspect-[16/10] bg-slate-100">
@@ -142,20 +142,20 @@ function initProjects() {
               loading="lazy" 
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <span class="absolute top-3 left-3 bg-emerald-700/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+            <span class="absolute top-3 left-3 bg-brand-navy/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm border border-brand-vibrant/30">
               ${project.badge}
             </span>
           </div>
 
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
-              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">
-                <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-inst bg-brand-vibrant/10 px-2.5 py-1 rounded-md">
+                <svg class="w-3.5 h-3.5 text-brand-vibrant" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 ${project.impact}
               </span>
             </div>
             
-            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
+            <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-inst transition-colors">
               ${project.title}
             </h3>
             
@@ -174,7 +174,7 @@ function initProjects() {
             href="${waUrl}" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider transition-colors duration-200"
+            class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand-navy hover:bg-brand-inst text-white font-bold text-xs uppercase tracking-wider transition-colors duration-200 shadow-sm"
           >
             Apoiar ou Solicitar Vagas
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -188,11 +188,11 @@ function initProjects() {
   filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       filterButtons.forEach(b => {
-        b.classList.remove("bg-emerald-600", "text-white", "shadow-sm");
+        b.classList.remove("bg-brand-inst", "text-white", "shadow-sm");
         b.classList.add("bg-white", "text-slate-700", "hover:bg-slate-100");
       });
 
-      btn.classList.add("bg-emerald-600", "text-white", "shadow-sm");
+      btn.classList.add("bg-brand-inst", "text-white", "shadow-sm");
       btn.classList.remove("bg-white", "text-slate-700", "hover:bg-slate-100");
 
       const category = btn.getAttribute("data-category");
@@ -219,23 +219,23 @@ function initCities() {
       const waUrl = generateWhatsAppUrl(waMsg);
 
       const div = document.createElement("div");
-      div.className = "bg-white p-4 rounded-2xl border border-slate-200 hover:border-emerald-500/60 shadow-sm transition-all flex items-center justify-between group";
+      div.className = "bg-white p-4 rounded-2xl border border-slate-200 hover:border-brand-vibrant/60 shadow-sm transition-all flex items-center justify-between group";
       div.innerHTML = `
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-brand-vibrant/10 text-brand-inst flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-brand-inst group-hover:text-white transition-colors">
             PA
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 text-sm leading-tight">${city.name}</h4>
+            <h4 class="font-bold text-brand-navy text-sm leading-tight">${city.name}</h4>
             <p class="text-[11px] text-slate-500">${city.status}</p>
           </div>
         </div>
         <div class="text-right shrink-0">
-          <span class="inline-block text-[10px] font-extrabold text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded-full mb-1">
+          <span class="inline-block text-[10px] font-extrabold text-brand-navy bg-brand-vibrant/15 px-2 py-0.5 rounded-full mb-1">
             ${city.count}
           </span>
           <div>
-            <a href="${waUrl}" target="_blank" class="text-[11px] font-bold text-slate-500 hover:text-emerald-700 flex items-center gap-1">
+            <a href="${waUrl}" target="_blank" class="text-[11px] font-bold text-brand-inst hover:text-brand-vibrant flex items-center gap-1">
               Ver datas
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -249,10 +249,10 @@ function initCities() {
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       filterBtns.forEach(b => {
-        b.classList.remove("bg-emerald-700", "text-white");
+        b.classList.remove("bg-brand-navy", "text-white");
         b.classList.add("bg-white", "text-slate-600", "hover:bg-slate-50");
       });
-      btn.classList.add("bg-emerald-700", "text-white");
+      btn.classList.add("bg-brand-navy", "text-white");
       btn.classList.remove("bg-white", "text-slate-600", "hover:bg-slate-50");
       render(btn.getAttribute("data-region"));
     });
