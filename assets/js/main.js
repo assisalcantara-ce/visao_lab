@@ -1,7 +1,7 @@
 // Configurações do Instituto Faz Bem Por Todo Pará
 const CONFIG = {
   instituteName: "Instituto Faz Bem Por Todo Pará",
-  whatsappNumber: "5591999999999", // Altere para o WhatsApp oficial do Instituto (DDD 91/93/94)
+  whatsappNumber: "5591988833907", // WhatsApp oficial do Instituto: (91) 98883-3907
   defaultMessage: "Olá! Vim pelo site do Instituto Faz Bem Por Todo Pará e gostaria de informações sobre os mutirões de saúde visual e atendimento social.",
 };
 
